@@ -75,8 +75,8 @@ class obstacle(object):
 def redrawGameWindow():
     win.blit(bg, (0, 0))
     Player_ship.draw(win)
-    #text = font.render('Score: ' + str(score), 1, (204, 239, 240))
-    #win.blit(text, (690, 10))
+    text = pygame.font.SysFont('comicsans', 30, True, True).render('Score: ' + str(score), 1, (204, 239, 240))
+    win.blit(text, (690, 10))
     for bullet in bullets:
         bullet.draw(win)
 
@@ -87,7 +87,6 @@ def redrawGameWindow():
 
 
 # main_loop
-font = pygame.font.SysFont('comicsans', 30, True)
 Player_ship = space_ship(0, 607, 100, 63)
 bullets = []
 shoot_loop = 0
